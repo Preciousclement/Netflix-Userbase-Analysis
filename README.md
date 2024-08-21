@@ -1,15 +1,15 @@
 # Netflix Userbase Analysis
 
 ## Table of Content
-- [Project Overview](Project-Overview)
-- [Data Source](Data-Source)
-- [Tools Used](Tools-Used)
-- [Objectives](Objectives)
-- [Steps Taken](Steps-Taken)
-- [Key Insights](Key-Insights)
-- [Conclusion](Conclusion)
-- [Recommendation](Recommendation)
-- 
+- [Project Overview](#project-overview)
+- [Data Source](#data-source)
+- [Tools Used](#tools-used)
+- [Objectives](#objectives)
+- [Steps Taken](#steps-taken)
+- [Key Insights](#key-insights)
+- [Conclusion](#conclusion)
+- [Recommendations](#recommendations)
+  
 ### Project Overview
 This project focuses on analyzing a Netflix userbase dataset, aiming to reveal insights related to subscription types, revenue patterns, and user demographics. 
 
