@@ -37,6 +37,93 @@ The dataset consists of 2,500 rows with attributes such as user ID, subscription
 - Revenue Analysis: Examined monthly revenue trends, including the identification of the highest and lowest revenue-generating subscription types.
 - Demographic Analysis: Explored user demographics, including age, gender, and country, to identify key user segments.
 
+```SQL
+-- NETFLIX USERBASE QUERY
+
+-- Identify Missing Data
+  SELECT User_ID, Last_Payment_Date
+FROM precious_projects.dbo.Netflix_Userbase
+WHERE Join_Date IS NULL OR Last_Payment_Date IS NULL;
+
+-- Exploration Phase --
+
+-- Count Total Users
+SELECT COUNT(*) AS Total_User
+FROM [precious_projects].[dbo].[Netflix_Userbase]; 
+
+-- Count Users by Subscription Type
+SELECT Subscription_Type, 
+COUNT(*) AS NumberOfUsers
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Subscription_Type;
+
+-- Average Monthly Revenue By Subscription
+SELECT Subscription_Type, 
+AVG(Monthly_Revenue) AS AvgMonthlyRevenue
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Subscription_Type;
+
+-- Users By Country
+SELECT Country, 
+COUNT(*) AS NumberOfUsers
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Country
+ORDER BY NumberOfUsers DESC;
+
+-- Age Distribution of All Users
+SELECT Age, 
+COUNT(*) AS NumberOfUsers
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Age
+ORDER BY Age;
+
+-- Gender Distribution
+SELECT Gender, 
+COUNT(*) AS NumberOfUsers
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Gender;
+
+-- User Retention
+SELECT Subscription_Type, 
+COUNT(*) AS RetainedUsers
+FROM precious_projects.dbo.Netflix_Userbase
+WHERE Last_Payment_Date > Join_Date 
+GROUP BY Subscription_Type;
+
+-- Common Devices Used
+SELECT Device, 
+COUNT(*) AS NumberOfUsers
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Device
+ORDER BY NumberOfUsers DESC;
+
+-- Total Revenue By Country
+SELECT Country, 
+SUM(Monthly_Revenue) AS TotalRevenue
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Country
+ORDER BY TotalRevenue DESC;
+
+-- Total Revenue by Sub Type
+SELECT Subscription_Type, 
+SUM(Monthly_Revenue) AS TotalRevenue
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Subscription_Type;
+
+--No of Signups Overtime
+SELECT CONVERT (DATE, Join_Date) AS SignupDate, 
+COUNT(*) AS NumberOfUsers
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY Join_Date 
+ORDER BY SignupDate;
+
+-- Last Payment Date Analysis
+SELECT CONVERT(DATE, Last_Payment_Date) AS PaymentDate, 
+COUNT(*) AS NumberOfPayments
+FROM precious_projects.dbo.Netflix_Userbase
+GROUP BY CONVERT(DATE, Last_Payment_Date)
+ORDER BY PaymentDate DESC;
+```
 #### 3. Visualizations
 - Subscription Distribution: Bar charts and pie charts showing the proportion of each subscription type.
 - Revenue Trends: Line graphs depicting monthly revenue patterns over time.
@@ -52,7 +139,6 @@ This analysis provides a comprehensive overview of Netflix’s userbase, highlig
 The insights can inform marketing strategies, product development, and customer engagement initiatives.
 
 ### Recommendations
-
 1. Enhance Targeted Marketing:
   - Focus on users aged 30-50 who prefer Premium subscriptions, as they represent a significant portion of the revenue.
   - Develop region-specific content and promotional strategies, especially in countries with a high concentration of users. Tailoring content to cultural preferences can increase user engagement and retention.
