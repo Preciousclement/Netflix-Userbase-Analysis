@@ -128,11 +128,21 @@ ORDER BY PaymentDate DESC;
 - Subscription Distribution: Bar charts and pie charts showing the proportion of each subscription type.
 - Revenue Trends: Line graphs depicting monthly revenue patterns over time.
 - Demographic Breakdown: Heatmaps and bar charts illustrating the distribution of users by age, gender, and country.
+  
+**Dashbord**
+
+  
+<img width="597" alt="Screenshot 2024-08-21 100416" src="https://github.com/user-attachments/assets/ddade6a0-20f0-4735-aebe-c9b667e13f1f">
+
+
+<img width="597" alt="Screenshot 2024-08-21 100437" src="https://github.com/user-attachments/assets/900331ce-42b0-49f0-8fbb-8a4a273bb239">
+
 
 ### Key Insights
-1. Subscription Preferences: Premium subscriptions are the most popular, followed by Basic and Standard plans.
+1. Subscription Preferences: Premium subscriptions had the most highest average revenue generated, followed by Basic and Standard plans.
 2. Revenue Patterns: There is a consistent monthly revenue stream, with Premium plans contributing the most.
-3. Demographics: The majority of users are between the ages of 30-50, with a relatively even distribution across genders. Most users access Netflix via laptops and smartphones.
+3. Demographics: The majority of users are between the ages of 30-50, with a relatively even distribution across genders.
+4. Most users access Netflix via tablet and smartphones.
 
 ### Conclusion
 This analysis provides a comprehensive overview of Netflix’s userbase, highlighting key trends and areas for potential growth.
