@@ -11,7 +11,7 @@
 - [Recommendations](#recommendations)
   
 ### Project Overview
-This project focuses on analyzing a Netflix userbase dataset, aiming to reveal insights related to subscription types, revenue patterns, and user demographics. 
+This project focuses on analyzing a Netflix userbase dataset, aiming to reveal insights related to netfilx subscription types, revenue patterns, and it's user demographics. 
 
 ### Data Source 
 The primary data set used for this analysis is "Netflix_Userbase.csv" file from kaggle.com.
